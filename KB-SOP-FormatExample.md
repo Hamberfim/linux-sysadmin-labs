@@ -17,7 +17,7 @@ When a lab breaks or a command fails, document it as if it is a tier-2 escalatio
 
 # Turning "Notes" into KB's and "SOP's" - KB Format Example
 
-
+---
 
 # KB00124: Resolving Permission Denied on Grain Scale Upload Directory
 
@@ -50,7 +50,7 @@ sudo -u john touch /var/log/scale_data/test_write.log
 
 Standard Operating Procedure (SOP) is proactive. It is a step-by-step instruction manual written so that any technician can deploy a service or complete a task perfectly the first time.
 
-
+---
 
 # SOP-SYS-004: Provisioning Secure Role-Based Access Directories
 
