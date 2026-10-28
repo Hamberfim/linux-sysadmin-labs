@@ -46,7 +46,7 @@ sudo -u john touch /var/log/scale_data/test_write.log
 ---
 
 
-# Turning "Notes" into SOPs's - SOP Format Example
+# Turning "Notes" into SOP's - SOP Format Example
 
 Standard Operating Procedure (SOP) is proactive. It is a step-by-step instruction manual written so that any technician can deploy a service or complete a task perfectly the first time.
 
