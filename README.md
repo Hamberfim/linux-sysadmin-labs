@@ -16,7 +16,7 @@ Welcome to my infrastructure portfolio. This repository documents a comprehensiv
 ## 🛠️ Sandbox Lab Architecture
 All projects are staged, tested, debugged, and documented inside a multi-node hypervisor infrastructure to mimic true enterprise deployments.
 
-* **`admin01` (AlmaLinux):** Primary operations server (User management, systemd services, secure SSH access).
+* **`admin01` or `alma10` (AlmaLinux):** Primary operations server (User management, systemd services, secure SSH access).
 * **`dns01`  (AlmaLinux):** Authoritative internal network DNS provider utilizing `BIND`.
 * **`web01`  (AlmaLinux):** Production-grade reverse proxy and web-host utilizing `Nginx`.
 * **`client01` (Ubuntu Desktop):** Diagnostic tier-1 test workstation simulating remote end-user environments.
