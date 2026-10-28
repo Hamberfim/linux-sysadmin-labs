@@ -1,0 +1,79 @@
+
+# Turning "Notes" into KB's and "SOP's" - KB Format Example
+
+Format the fixes and workarounds as Standard Operating Procedures (SOPs) or Knowledge Base (KB) Articles.
+When a lab breaks or a command fails, document it as if it is a tier-2 escalation ticket using this Markdown structure:
+
+
+# KB00124: Resolving Permission Denied on Grain Scale Upload Directory
+
+## Issue
+Operators were unable to write log payloads to `/var/log/scale_data/`, resulting in an application hang.
+
+## Root Cause Analysis (RCA)
+The directory ownership was mistakenly set to `root:root` with `755` permissions during provisioning, blocking the `scaleops` group.
+
+## Resolution / Workaround
+1. Corrected directory group ownership to the designated operational group.
+2. Adjusted write permissions for group members.
+
+```bash
+sudo chown -R root:scaleops /var/log/scale_data/
+sudo chmod -R 775 /var/log/scale_data/
+```
+
+## Verification
+Verified resolution by switching to user `john` and successfully touching a test file:
+```bash
+sudo -u john touch /var/log/scale_data/test_write.log
+```
+
+# Turning "Notes" into KB's and "SOPs" - SOP Format Example
+
+Standard Operating Procedure (SOP) is proactive. It is a step-by-step instruction manual written so that any technician can deploy a service or complete a task perfectly the first time.
+If your KB article documented how to fix a permission error on a directory, your SOP is the document that teaches a technician how to properly create and secure that directory from scratch during server setup.
+
+
+# SOP-SYS-004: Provisioning Secure Role-Based Access Directories
+
+## 1. Objective
+This procedure defines the standard configuration for establishing secure, shared data directories on enterprise Linux instances. Adherence to this standard ensures proper role-based isolation and prevents permission-related application failures.
+
+## 2. Prerequisites
+* Root or full `sudo` administrative privileges on the target system.
+* Pre-existing operational user groups (e.g., `scaleops`).
+
+## 3. Step-by-Step Execution Procedure
+
+### Step 3.1: Create the Target Directory
+Initialize the directory path within the system logging environment:
+```bash
+sudo mkdir -p /var/log/scale_data/
+```
+
+### Step 3.2: Configure Directory Permissions
+Apply explicit POSIX permissions. The directory must allow full read, write, and execute permissions for the owner and group, but restrict write access from public system users (775):
+```bash
+sudo chmod 775 /var/log/scale_data/
+```
+
+### Step 3.3: Assign Role-Based Ownership
+Set the user ownership to `root` and delegate group control to the designated operational group:
+```bash
+sudo chown root:scaleops /var/log/scale_data/
+```
+
+## 4. Quality Assurance & Verification
+Validate the access model by simulating a non-root group user creation task. Replace `john` with an active member of the designated operational group:
+
+```bash
+# Attempt to write a validation log payload as a standard group user
+sudo -u john touch /var/log/scale_data/provision_test.log
+
+# Verify the file was created successfully with accurate permissions
+ls -l /var/log/scale_data/provision_test.log
+```
+
+## 5. References
+* *UNIX and Linux System Administration Handbook* — Chapter 6: The Filesystem & Secure Permissions.
+* *The Practice of System and Network Administration* — Chapter 14: Deployment Standards and Operational Consistency.
