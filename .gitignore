@@ -1,55 +1,62 @@
-# Prerequisites
-*.d
+# ====================================================================
+# linux-sysadmin-labs - Lab Portfolio - .gitignore
+# ====================================================================
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# 1. Hypervisor & Virtualization Files (CRITICAL - DO NOT TRACK)
+# --------------------------------------------------------------------
+# VirtualBox files
+*.vdi
+*.vvfat
+*.vmdk
+*.vpc
+*.vhd
+*.vbox
+*.vbox-prev
+/vbox/
+/.vbox/
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# VMware files
+*.vmwarevm
+*.vmx
+*.vmxf
+*.vmdk
+*.vmsd
+*.vmsn
+*.vmss
+*.vmem
+*.log
+*.nvram
 
-# Precompiled Headers
-*.gch
-*.pch
+# Vagrant (if used later for VM automation)
+.vagrant/
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# 2. Operating System Artifacts
+# --------------------------------------------------------------------
+# Windows host artifacts
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# macOS host artifacts (if applicable)
+.DS_Store
+.AppleDouble
+.LSOverride
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# 3. Text Editors & IDEs
+# --------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*~
+.project
+.settings/
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
-
-# debug information files
-*.dwo
+# 4. Sensitive Data & Security (Accidental Leaks)
+# --------------------------------------------------------------------
+# Never commit your actual private keys, passwords, or AWS secret keys
+*.pem
+*.key
+*.pub
+.env
+secret.txt
+credentials.conf
