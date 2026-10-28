@@ -5,7 +5,7 @@
 Welcome to my infrastructure portfolio. This repository documents a comprehensive, 12-phase technical curriculum designed to build, secure, and monitor modern IT infrastructure. The practical labs, configurations, and automation scripts housed here demonstrate production-ready proficiencies required for hybrid Enterprise IT Support and Linux System Administration roles.
 
 ## ⚠️ Portfolio Status: Active & In-Progress
-*This repository is a live workspace being updated in real-time as I progress. It serves as an architectural blueprint for my active roadmap. *
+*This repository is a live workspace being updated in real-time as I progress. It serves as the structure/architectural blueprint for my active roadmap. An incomplete Phase URL will result in a "404 - page not found" error.*
 
 ## 🚀 Core Technical Focus Areas
 * **Linux System Administration:** Operational fluency in enterprise RHEL-compatible environments (AlmaLinux) and Debian/Ubuntu Server ecosystems.
@@ -21,7 +21,15 @@ All projects are staged, tested, debugged, and documented inside a multi-node hy
 * **`web01`  (AlmaLinux):** Production-grade reverse proxy and web-host utilizing `Nginx`.
 * **`client01` (Ubuntu Desktop):** Diagnostic tier-1 test workstation simulating remote end-user environments.
 
-## 📂 Curriculum & Project Breakdown Plan - Element to Come
+## 📚 Core Documentation & Technical References
+The architectural standards and administration methodologies implemented throughout this repository are driven by two primary technical references and to a lesser extent an operational workflow blueprint:
+### Primary Technical Guides (Hands-on Configuration)
+* **The Linux Command Line** *(William Shotts)* — Primary guide for hands-on scripting and terminal commands.
+* **UNIX and Linux System Administration Handbook** *(Nemeth et al.)* — Primary guide for system configuration and network architecture.
+### Secondary Reference (Operational Strategy)
+* **The Practice of System and Network Administration** *(Limoncelli et al.)* — Operational blueprint used for high-level IT best practices, documentation layout, and workflow design.
+
+## 📂 Curriculum & Project Breakdown Plan
 
 ### [Phase 1: Linux Foundations](./Phase-01-Foundations/)
 * **Focus:** Command-line diagnostics, log file navigation (`/var/log/`), and remote support prerequisites.
