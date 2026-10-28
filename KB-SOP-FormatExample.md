@@ -1,15 +1,15 @@
 # Format the fixes and workarounds as Knowledge Base (KB) Articles or Standard Operating Procedures (SOPs).
 ## Knowledge Base (KB)
 * The purpose of a Knowledge Base (KB) is to document a specific breakdown, troubleshooting path and repair.
-* The tone of a Knowledge Base (KB) is "Forensic", i.e., "the directory permissions were mistakenly set to...".
+* The tone of a Knowledge Base (KB) is "Forensic"(Root Cause Analysis format), i.e., "the directory permissions were mistakenly set to...".
 * The trigger of a Knowledge Base (KB) in an error, an outage, or a support ticket escalation.
 
 ## Standard Operating Procedures (SOPs)
 * The purpose of a Standard Operating Procedures (SOPs) is to document a routine, repeatable, and standardized deployment process.
-* The tone of a Standard Operating Procedures (SOPs) is "Directive", i.e., "the directory permission must allow...".
+* The tone of a Standard Operating Procedures (SOPs) is "Directive"("must", "shall") , i.e.,  "the directory permission *must* allow...".
 * The trigger of a Standard Operating Procedures (SOPs) is provisioning new infrastructure, on-boarding, or scheduled maintenance.
 
-**If your KB article documented how to fix a permission error on a directory, your SOP is the document that teaches a technician how to properly create and secure that directory from scratch during server setup.**
+**Each adheres to standard IT Service Management (ITSM) and systems administration frameworks. If your KB article documented how to fix a permission error on a directory, your SOP is the document that teaches a technician how to properly create and secure that directory from scratch during server setup.**
 
 ---
 
@@ -93,5 +93,5 @@ ls -l /var/log/scale_data/provision_test.log
 ```
 
 ## 5. References
-* *UNIX and Linux System Administration Handbook* — Chapter 6: The Filesystem & Secure Permissions.
-* *The Practice of System and Network Administration* — Chapter 14: Deployment Standards and Operational Consistency.
+* *UNIX and Linux System Administration Handbook* (5th Edition) — Chapter 5: The Filesystem.
+* *The Practice of System and Network Administration* (3rd Edition) — Chapter 17: Service Planning and Engineering, Chapter 29: Debugging, Chapter 30: Fixing Things Once, Chapter 31: Documentation.
