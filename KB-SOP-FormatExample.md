@@ -1,9 +1,21 @@
+# Format the fixes and workarounds as Knowledge Base (KB) Articles or Standard Operating Procedures (SOPs).
+## Knowledge Base (KB)
+* The purpose of a Knowledge Base (KB) is to document a specific breakdown, troubleshooting path and repair.
+* The tone of a Knowledge Base (KB) is "Forensic", i.e., "the directory permissions were mistakenly set to...".
+* The trigger of a Knowledge Base (KB) in an error, an outage, or a support ticket escalation.
+
+## Standard Operating Procedures (SOPs)
+* The purpose of a Standard Operating Procedures (SOPs) is to document a routine, repeatable, and standardized deployment process.
+* The tone of a Standard Operating Procedures (SOPs) is "Directive", i.e., "the directory permission must allow...".
+* The trigger of a Standard Operating Procedures (SOPs) is provisioning new infrastructure, on-boarding, or scheduled maintenance.
+
+**If your KB article documented how to fix a permission error on a directory, your SOP is the document that teaches a technician how to properly create and secure that directory from scratch during server setup.**
+
+---
+
+When a lab breaks or a command fails, document it as if it is a tier-2 escalation ticket using these Markdown structures:
 
 # Turning "Notes" into KB's and "SOP's" - KB Format Example
-
-Format the fixes and workarounds as Standard Operating Procedures (SOPs) or Knowledge Base (KB) Articles.
-When a lab breaks or a command fails, document it as if it is a tier-2 escalation ticket using this Markdown structure:
-
 
 # KB00124: Resolving Permission Denied on Grain Scale Upload Directory
 
@@ -28,11 +40,13 @@ Verified resolution by switching to user `john` and successfully touching a test
 sudo -u john touch /var/log/scale_data/test_write.log
 ```
 
+
+---
+
+
 # Turning "Notes" into KB's and "SOPs" - SOP Format Example
 
 Standard Operating Procedure (SOP) is proactive. It is a step-by-step instruction manual written so that any technician can deploy a service or complete a task perfectly the first time.
-If your KB article documented how to fix a permission error on a directory, your SOP is the document that teaches a technician how to properly create and secure that directory from scratch during server setup.
-
 
 # SOP-SYS-004: Provisioning Secure Role-Based Access Directories
 
