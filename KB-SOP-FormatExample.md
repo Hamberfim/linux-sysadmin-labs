@@ -15,7 +15,7 @@
 
 When a lab breaks or a command fails, document it as if it is a tier-2 escalation ticket using these Markdown structures:
 
-# Turning "Notes" into KB's and "SOP's" - KB Format Example
+# Turning "Notes" into KB's - KB Format Example
 
 ---
 
@@ -46,7 +46,7 @@ sudo -u john touch /var/log/scale_data/test_write.log
 ---
 
 
-# Turning "Notes" into KB's and "SOPs" - SOP Format Example
+# Turning "Notes" into SOPs's - SOP Format Example
 
 Standard Operating Procedure (SOP) is proactive. It is a step-by-step instruction manual written so that any technician can deploy a service or complete a task perfectly the first time.
 
